@@ -1,23 +1,32 @@
-var date = new Date('2020-01-01 00:03'); // Fecha con el tiempo que tenga tres minutos
+// Establece la fecha y hora a la que termina la cuenta atrás
+var countDownDate = new Date("Apr 5, 2030 08:30:00").getTime();
 
-// Función para rellenar con ceros
-var padLeft = n => "00".substring(0, "00".length - n.length) + n;
+// Actualiza la cuenta atrás cada 1 segundo
+var x = setInterval(function() {
 
-// Asignar el intervalo a una variable para poder eliminar el intervalo cuando llegue al límite
-var interval = setInterval(() => {
-    // Asignar el valor de minutos
-    var minutes = padLeft(date.getMinutes() + "");
+  // Obtiene la fecha y hora actuales
+  var now = new Date().getTime();
 
-    // Asignar el valor de segundos
-    var seconds = padLeft(date.getSeconds() + "");
+  // Calcula la diferencia entre la fecha final y la actual
+  var distance = countDownDate - now;
 
-    console.log(minutes, seconds);
+  // Calcula los días, horas, minutos y segundos restantes
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    // Restarle a la fecha actual 1000 milisegundos
-    date = new Date(date.getTime() - 1000);
+  // Formatea el tiempo restante en formato MM:SS
+  function formatTime(time) {
+    return time < 10 ? `0${time}` : time;
+  }
 
-    // Si llega a 2:45, eliminar el intervalo
-    if( minutes == '02' && seconds == '45' ) {
-        clearInterval(interval);
-    }
+  // Muestra el resultado en el elemento con id="base-timer-label"
+  document.getElementById("base-timer-label").innerHTML = `${formatTime(minutes)}:${formatTime(seconds)}`;
+
+  // Si la cuenta atrás termina, muestra un mensaje
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("base-timer-label").innerHTML = "EXPIRADO";
+  }
 }, 1000);

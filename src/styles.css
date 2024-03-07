@@ -19,3 +19,35 @@ main > h1 {
   text-align: center;
   font-size: 3.5em;
 }
+
+/* Establece la altura y el ancho del contenedor */
+.base-timer {
+  position: relative;
+  height: 300px;
+  width: 300px;
+}
+
+/* Elimina el estilo SVG que ocultaría la etiqueta del tiempo */
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+/* El camino SVG que muestra el progreso de la cuenta atrás */
+.base-timer__path-elapsed {
+  stroke-width: 7px;
+  stroke: grey;
+}
+
+/* La etiqueta que muestra el valor del tiempo restante */
+.base-timer__label {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-size: 48px;
+}
