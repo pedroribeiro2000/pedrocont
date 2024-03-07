@@ -1,30 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-ES">
+    <head>
+        <meta charset="utf-8">
+        <link href="Css/CssPrincipal.css" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>March-AM</title>
+    </head>
+    <body>
+        <div id="contenedor" class="clearfix">
+            <main>
+                <div class="imagen">
+                    <h1>March-AM</h1>
+                    <img src="img/imagenPrincipal.jpg" alt="imagen de la pantalla de inicio"/>  
+                </div>
+                <section class="posts">
+                    <h2>Inicio proyecto March AM</h2>
+                    <article class="Hardware">
+                        <div id="C1">
+                            <h3 id="Caja">Cuenta atras</h3>
+                            <script src="./script.js"></script>
+                        </div>
+                    </article>
+                </section>
+            </main>
+            <aside>
+                <div class="widget">
+                    <h3 class="titulo">Información</h3>
+                    <ul>
+                        <li><a href="#envio">Envío</a></li>
+                    </ul>
+                    <img src="img/Logocircular.png" class="web" alt="HWComparator" /> 
+                </div> 
+                <div id="Local">
+                    <h3>Local</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3040.9981529681686!2d-3.676367184267737!3d40.342386979373856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422745126aa1f5%3A0xa33f20ebbfaaec71!2sTrujillo%20Burger%20Estefanita!5e0!3m2!1ses!2ses!4v1615126404601!5m2!1ses!2ses"  allowfullscreen=""></iframe>
+                </div>
+            </aside>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>MARCH-AM</title>
-</head>
-
-<body>
-  <h1>MARCH-AM Project</h1>
-  <h4>tiempo restante:</h4>
-  <main>
-    <script src="./script.js"></script>
-  </main>
-  <div class="base-timer">
-    <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <g class="base-timer__circle">
-        <circle class="base-timer__path-elapsed" cx="50" cy="50" r="90" />
-      </g>
-    </svg>
-    <span id="base-timer-label" class="base-timer__label">
-      <!-- Etiqueta del tiempo restante -->
-    </span>
-  </div>
-  
-</body>
-
+            <footer>
+                <p>Mira el tiempo que nos queda</p>
+                <p>
+                    Copyright © March-AMP. Todos los derechos reservados.
+                </p>
+            </footer>
+        </div>
+    </body>
 </html>
