@@ -22,7 +22,7 @@ var x = setInterval(function() {
   }
 
   // Muestra el resultado en el elemento con id="base-timer-label"
-  document.getElementById("base-timer-label").innerHTML = `${formatTime(days)}:${formatTime(hours)}:${formatTime(minutes)}:${formatTime(seconds)}`;
+  document.getElementById("base-timer-label").innerHTML = `${formatTime(days)} dias ${formatTime(hours)} horas ${formatTime(minutes)} minutos ${formatTime(seconds)}`;
 
   // Si la cuenta atrás termina, muestra un mensaje
   if (distance < 0) {
