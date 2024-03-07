@@ -2,7 +2,7 @@
 <html lang="es-ES">
     <head>
         <meta charset="utf-8">
-        <link href="Css/CssPrincipal.css" rel="stylesheet" type="text/css">
+        <link href="styles.css" rel="stylesheet" type="text/css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>March-AM</title>
     </head>
@@ -16,10 +16,16 @@
                 <section class="posts">
                     <h2>Inicio proyecto March AM</h2>
                     <article class="Hardware">
-                        <div id="C1">
-                            <h3 id="Caja">Cuenta atras</h3>
-                            <script src="./script.js"></script>
-                        </div>
+                      <div class="base-timer">
+                        <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                          <g class="base-timer__circle">
+                            <circle class="base-timer__path-elapsed" cx="50" cy="50" r="90" />
+                          </g>
+                        </svg>
+                        <span id="base-timer-label" class="base-timer__label">
+                          <!-- Etiqueta del tiempo restante -->
+                        </span>
+                      </div>
                     </article>
                 </section>
             </main>
