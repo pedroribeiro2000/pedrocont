@@ -1,5 +1,5 @@
 // Establece la fecha y hora a la que termina la cuenta atrás
-var countDownDate = new Date("Apr 5, 2030 08:30:00").getTime();
+var countDownDate = new Date("Apr 5, 2024 08:30:00").getTime();
 
 // Actualiza la cuenta atrás cada 1 segundo
 var x = setInterval(function() {
